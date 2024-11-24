@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق مشاهدة الإعلانات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎥 تطبيق مشاهدة الإعلانات</h1>
+        </header>
+
+        <!-- تسجيل الدخول -->
+        <div id="login-container" class="form-container">
+            <h2>تسجيل الدخول</h2>
+            <input type="email" id="email" placeholder="البريد الإلكتروني">
+            <input type="password" id="password" placeholder="كلمة المرور">
+            <button id="login-btn">تسجيل الدخول</button>
+            <p>لا تملك حسابًا؟ <span id="show-register" class="link">إنشاء حساب</span></p>
+        </div>
+
+        <!-- إنشاء حساب -->
+        <div id="register-container" class="form-container hidden">
+            <h2>إنشاء حساب</h2>
+            <input type="email" id="reg-email" placeholder="البريد الإلكتروني">
+            <input type="password" id="reg-password" placeholder="كلمة المرور">
+            <button id="register-btn">إنشاء حساب</button>
+            <p>لديك حساب بالفعل؟ <span id="show-login" class="link">تسجيل الدخول</span></p>
+        </div>
+
+        <!-- لوحة التحكم -->
+        <div id="dashboard" class="hidden">
+            <h2>مرحبًا بك!</h2>
+            <p>رصيدك: <span id="balance">0</span> دينار عراقي</p>
+            <p>الإعلانات المتاحة: <span id="ads-count">10</span></p>
+
+            <!-- خانات الإعلانات -->
+            <div id="ads-container" class="ads-container">
+                <!-- يتم إنشاء الإعلانات ديناميكيًا -->
+            </div>
+
+            <button id="withdraw-btn">سحب الرصيد</button>
+
+            <!-- قسم السحب -->
+            <div id="withdraw-container" class="hidden">
+                <h3>سحب الرصيد</h3>
+                <input type="text" id="withdraw-info" placeholder="أدخل رقم هاتف الزين كاش">
+                <button id="confirm-withdraw-btn">تأكيد السحب</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
